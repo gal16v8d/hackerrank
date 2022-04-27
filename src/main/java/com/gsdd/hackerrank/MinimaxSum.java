@@ -26,13 +26,13 @@ public class MinimaxSum {
     System.out.print(min + " " + max);
   }
 
-  private static final Scanner scanner = new Scanner(System.in);
+  private static final Scanner SCANNER = new Scanner(System.in);
 
   public static void main(String[] args) {
     int[] arr = new int[5];
 
-    String[] arrItems = scanner.nextLine().split(" ");
-    scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+    String[] arrItems = SCANNER.nextLine().split(" ");
+    SCANNER.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
     for (int i = 0; i < 5; i++) {
       int arrItem = Integer.parseInt(arrItems[i]);
@@ -41,6 +41,6 @@ public class MinimaxSum {
 
     miniMaxSum(arr);
 
-    scanner.close();
+    SCANNER.close();
   }
 }
