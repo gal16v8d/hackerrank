@@ -10,7 +10,6 @@ public class Staircase {
       StringBuilder sb = new StringBuilder(n);
       System.out.println(sb.replace(n - 2, n - 1, "#"));
     }
-
   }
 
   private static final Scanner SCANNER = new Scanner(System.in);
