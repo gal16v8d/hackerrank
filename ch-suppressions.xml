@@ -15,4 +15,5 @@
 	<!-- False positive using lombok -->
 	<suppress checks="HideUtilityClassConstructor" files=".*\.java" />
 	<suppress checks="MagicNumber" files=".*\.java" />
+	<suppress checks="RegexpSingleline" files=".*\.java" />
 </suppressions>
