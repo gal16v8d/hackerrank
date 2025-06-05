@@ -21,14 +21,14 @@
 
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<mvn.compiler.plugin.version>3.13.0</mvn.compiler.plugin.version>
-		<mvn.jacoco.plugin.version>0.8.12</mvn.jacoco.plugin.version>
-		<mvn.failsafe.plugin.version>3.5.0</mvn.failsafe.plugin.version>
-		<mvn.surefire.plugin.version>3.5.0</mvn.surefire.plugin.version>
-		<mvn.javadoc.plugin.version>3.10.0</mvn.javadoc.plugin.version>
-		<mvn.spotless.plugin.version>2.43.0</mvn.spotless.plugin.version>
-		<mvn.checkstyle.plugin.version>3.5.0</mvn.checkstyle.plugin.version>
-		<mvn.dependency-check.plugin.version>10.0.4</mvn.dependency-check.plugin.version>
+		<mvn.compiler.plugin.version>3.14.0</mvn.compiler.plugin.version>
+		<mvn.jacoco.plugin.version>0.8.13</mvn.jacoco.plugin.version>
+		<mvn.failsafe.plugin.version>3.5.3</mvn.failsafe.plugin.version>
+		<mvn.surefire.plugin.version>3.5.3</mvn.surefire.plugin.version>
+		<mvn.javadoc.plugin.version>3.11.2</mvn.javadoc.plugin.version>
+		<mvn.spotless.plugin.version>2.44.5</mvn.spotless.plugin.version>
+		<mvn.checkstyle.plugin.version>3.6.0</mvn.checkstyle.plugin.version>
+		<mvn.dependency-check.plugin.version>12.1.1</mvn.dependency-check.plugin.version>
 
 		<!-- If true skips UT test execution -->
 		<skip.unit.tests>false</skip.unit.tests>
@@ -37,9 +37,9 @@
 
 		<checkstyle.version>10.18.1</checkstyle.version>
 
-		<lombok.version>1.18.34</lombok.version>
+		<lombok.version>1.18.38</lombok.version>
 		<!-- test dependencies -->
-		<junit.version>5.11.1</junit.version>
+		<junit.version>5.13.0</junit.version>
 	</properties>
 
 	<dependencies>
