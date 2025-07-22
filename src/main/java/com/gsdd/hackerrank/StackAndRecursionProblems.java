@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.IntStream;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
@@ -72,5 +73,26 @@ public class StackAndRecursionProblems {
 
     // After iterating through the string, if the stack is empty, all brackets are matched.
     return stack.isEmpty();
+  }
+
+  public static void main(String[] args) {
+    var queue = new ArrayDeque<String>();
+    var stack = new ArrayDeque<String>();
+    IntStream.range(0, 10)
+        .forEach(
+            i -> {
+              queue.add("Queue " + i);
+              stack.push("Stack " + i);
+            });
+    while (!queue.isEmpty()) {
+      System.out.println("Current Queue Elements: ");
+      queue.forEach(System.out::println);
+      queue.poll();
+    }
+    while (!stack.isEmpty()) {
+      System.out.println("Current Stack Elements: ");
+      stack.forEach(System.out::println);
+      stack.pop();
+    }
   }
 }

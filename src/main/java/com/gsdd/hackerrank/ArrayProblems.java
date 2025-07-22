@@ -90,4 +90,70 @@ public class ArrayProblems {
     // Copy elements back to the original array
     System.arraycopy(rotated, 0, values, 0, n);
   }
+
+  /**
+   * Find the minimum possible number you can build with the digits of each number. The number
+   * should not have leading zeros. Also sign of the number should be preserved.
+   */
+  public static int[] minimumNumber(int[] values) {
+    for (int i = 0; i < values.length; i++) {
+      int value = values[i];
+      boolean isNegative = value < 0;
+      StringBuilder sb = new StringBuilder();
+
+      // Convert to absolute value and sort digits
+      char[] digits = String.valueOf(Math.abs(value)).toCharArray();
+      Arrays.sort(digits);
+
+      if (isNegative) {
+        for (int j = digits.length - 1; j >= 0; j--) {
+          sb.append(digits[j]);
+        }
+      } else {
+        // check arr for leading zeros
+        if (digits[0] == '0') {
+          // Find the first non-zero digit
+          int firstNonZeroIndex = 0;
+          while (firstNonZeroIndex < digits.length && digits[firstNonZeroIndex] == '0') {
+            firstNonZeroIndex++;
+          }
+          // If we found a non-zero digit, swap it with the first digit
+          if (firstNonZeroIndex < digits.length) {
+            sb.append(digits[firstNonZeroIndex]);
+            for (int j = 0; j < digits.length; j++) {
+              if (j != firstNonZeroIndex) {
+                sb.append(digits[j]);
+              }
+            }
+          } else {
+            sb.append('0'); // If all are zeros, just append one zero
+          }
+        } else {
+          sb.append(digits);
+        }
+      }
+
+      // Convert back to integer and store in the array
+      values[i] = isNegative ? -Integer.parseInt(sb.toString()) : Integer.parseInt(sb.toString());
+    }
+    return values;
+  }
+
+  /** Print a triangle of n size (n: number of rows) */
+  public static String printTriangle(int n) {
+    if (n <= 0) {
+      return "";
+    }
+    if (n == 1) {
+      return "1";
+    } else {
+      StringBuilder sb = new StringBuilder();
+      sb.append("1\n");
+      for (int i = 2; i <= n; i++) {
+        sb.append(String.valueOf(i).repeat(Math.max(0, i)));
+        sb.append("\n");
+      }
+      return sb.toString();
+    }
+  }
 }
